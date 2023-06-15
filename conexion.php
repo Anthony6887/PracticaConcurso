@@ -12,7 +12,7 @@ class Conexion
         $bd = "id20895153_base";
 
         $conexion = new PDO ("mysql:host=$servidor;dbname=$bd", $usuario, $password);
-        echo $conexion;
+        return $conexion;
     }
 
 
