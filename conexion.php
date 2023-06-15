@@ -6,13 +6,13 @@ class Conexion
     }
     public static function conectar()
     {
-        $servidor = "99.000webhost.io";
-        $usuario = "admin";
-        $password = "Ad.12345";
-        $bd = "id20895153_base";
+        $servidor = "localhost";
+        $usuario = "id20919424_admin";
+        $password = "q%BANN4p(N)(H#>F";
+        $bd = "id20919424_base";
 
         $conexion = new PDO ("mysql:host=$servidor;dbname=$bd", $usuario, $password);
-        echo $conexion;
+        return $conexion;
     }
 
 
