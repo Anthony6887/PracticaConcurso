@@ -28,5 +28,16 @@ class Persona
         echo json_encode($dato);
 
     }
+
+    public function eliminarPersona(){
+        $con = Conexion::conectar();
+        $cedula = $_GET['cedula'];
+        $estado = "inactivo";
+        $consulta = "UPDATE personas SET estado='$estado' WHERE cedula='$cedula'";
+        $resultado = $con->prepare($consulta);
+        $resultado->execute();
+        $dato = "Se borro";
+        echo json_encode($dato);
+    }
 }
 ?>
