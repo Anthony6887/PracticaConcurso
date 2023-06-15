@@ -26,5 +26,21 @@ $dato = "Se inserto correctamente";
 echo json_encode($dato);
 
 }
+
+public function modificarPersona(){
+$con = Conexion::conectar();
+$nombre = $_GET['nombre'];
+$cedula = $_GET['cedula'];
+$apellido = $_GET['apellido'];
+$edad = $_GET['edad'];
+$consulta = "UPDATE personas SET nombre='$nombre',apellido='$apellido',edad='$edad' WHERE cedula='$cedula'";
+$resultado = $con->prepare($consulta);
+$resultado->execute();
+$dato = "Se actualizo";
+echo json_encode($dato);
+}
+
+
+
 }
 ?>
