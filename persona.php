@@ -40,7 +40,5 @@ $dato = "Se actualizo";
 echo json_encode($dato);
 }
 
-
-
 }
 ?>
