@@ -36,7 +36,7 @@ class Persona
         $consulta = "UPDATE personas SET estado='$estado' WHERE cedula='$cedula'";
         $resultado = $con->prepare($consulta);
         $resultado->execute();
-        $dato = "Se borro";
+        $dato = "Se borro correctamente";
         echo json_encode($dato);
     }
 }
